@@ -28,8 +28,9 @@
   <div class="nav-right">
     <input type="text" placeholder="Cari materi..." class="search-bar">
     <button class="btn primary">Beli Paket</button>
-    <button class="btn">Login</button>
-    <button class="btn outline">Sign Up</button>
+    <button class="btn" onclick="window.location.href='login.php';">Login</button>
+
+    <button class="btn" onclick="window.location.href='register.php';">Sign Up</button>
   </div>
 </header>
 
