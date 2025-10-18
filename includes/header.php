@@ -28,7 +28,7 @@
   <div class="nav-right">
     <input type="text" placeholder="Cari materi..." class="search-bar">
     <button class="btn primary">Beli Paket</button>
-    <button class="btn"><a href="">Login</a></button>
+    <button class="btn">Login</button>
     <button class="btn outline">Sign Up</button>
   </div>
 </header>
