@@ -1,0 +1,87 @@
+/* ====== AUTH PAGE STYLE (login & register) ====== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a73e8, #4285f4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background-color: #fff;
+    width: 380px;
+    padding: 30px 30px 40px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.auth-container input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+    outline: none;
+}
+
+.auth-container button {
+    width: 50%;
+    /* background-color: #1a73e8; */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background-color: #0f5fd1;
+}
+
+.auth-container p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.auth-container a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
