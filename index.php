@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php include('includes/user_check.php'); ?>
+=======
+
+>>>>>>> 27b21ad70aca052e6dbc824a33fb8440cfdef150
 <?php include('includes/header.php'); ?>
 
 <section class="hero-section">
