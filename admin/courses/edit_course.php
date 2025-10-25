@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../../includes/config.php';
-require_once '../../includes/check_admin.php';
+require_once '../../includes/admin_check.php';
 
 $id = $_GET['id'] ?? 0;
 $course = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM courses WHERE id = $id"));
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <input type="text" name="thumbnail" value="<?= htmlspecialchars($course['thumbnail']); ?>" class="w-full border px-3 py-2 rounded-lg">
     </div>
     <div class="flex justify-between items-center">
-      <a href="index.php" class="text-gray-500 hover:underline">Kembali</a>
+      <a href="index_course.php" class="text-gray-500 hover:underline">Kembali</a>
       <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow">Update</button>
     </div>
   </form>

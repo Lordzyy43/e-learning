@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../../includes/config.php';
-require_once '../../includes/check_admin.php';
+require_once '../../includes/admin_check.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $judul = mysqli_real_escape_string($conn, $_POST['judul']);
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   mysqli_query($conn, "INSERT INTO courses (judul, deskripsi, kategori, thumbnail, uploader_id, tanggal_upload)
                        VALUES ('$judul', '$deskripsi', '$kategori', '$thumbnail', '$uploader_id', NOW())");
 
-  header("Location: index.php");
+  header("Location: index_course.php");
   exit;
 }
 ?>
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <input type="text" name="thumbnail" class="w-full border px-3 py-2 rounded-lg focus:ring focus:ring-blue-200">
     </div>
     <div class="flex justify-between items-center">
-      <a href="index.php" class="text-gray-500 hover:underline">Kembali</a>
+      <a href="index_course.php" class="text-gray-500 hover:underline">Kembali</a>
       <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow">Simpan</button>
     </div>
   </form>

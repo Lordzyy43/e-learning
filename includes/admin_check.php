@@ -1,11 +1,4 @@
 <?php
-session_start();
-
-// kalau belum login sama sekali
-if (!isset($_SESSION['role'])) {
-
-// check_admin.php
-
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -16,11 +9,9 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-// kalau yang login bukan admin
-// Cek apakah user bukan admin
+// Cek apakah user adalah admin
 if ($_SESSION['role'] !== 'admin') {
     header("Location: ../index.php");
     exit;
-}
 }
 ?>

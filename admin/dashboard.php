@@ -35,43 +35,7 @@ $total_progress = getCount($conn, 'progress', "status='selesai'");
 <body class="bg-gray-100 min-h-screen font-inter flex">
 
   <!-- Sidebar -->
-  <aside class="w-64 bg-gradient-to-b from-blue-700 to-blue-800 text-white flex flex-col shadow-lg fixed h-full">
-    <div class="p-5 border-b border-blue-600 flex items-center gap-3">
-      <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" class="w-8 h-8" alt="Logo">
-      <span class="text-2xl font-bold">E-Learning</span>
-    </div>
-
-    <nav class="flex-1 p-4 space-y-3 text-sm">
-      <a href="dashboard.php" class="flex items-center gap-2 py-2 px-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9m0 0l9 9M4 10h16v10H4V10z"/>
-        </svg>
-        Dashboard
-      </a>
-      <a href="courses/index_course.php" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-blue-700 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m-4-4h8M4 6h16v12H4z"/>
-        </svg>
-        Kelola Kursus
-      </a>
-      <a href="materials.php" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-blue-700 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m-6 0h6"/>
-        </svg>
-        Kelola Materi
-      </a>
-    </nav>
-
-    <div class="p-4 border-t border-blue-600 mt-auto">
-      <a href="../logout.php" class="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white py-2 px-3 rounded-lg transition w-full">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1"/>
-        </svg>
-        Logout
-      </a>
-    </div>
-  </aside>
+  <?php include 'includes_admin/sidebar.php'; ?>
 
   <!-- Main Content -->
   <main class="flex-1 ml-64 p-10">
